@@ -39,63 +39,53 @@
       transform: translateY(-50px);
     }
 
+    /* ===== MOBILE-FRIENDLY FLORAL ELEMENTS ===== */
     .floral-decoration {
       position: absolute;
       pointer-events: none;
       z-index: 1;
+      opacity: 0.8;
     }
 
     .floral-top-right {
-      top: -50px;
-      right: -50px;
-      width: 400px;
-      height: 500px;
-      animation: gentleFloat 12s ease-in-out infinite;
+      top: 0;
+      right: 0;
+      width: 150px;
+      height: 200px;
     }
 
     .floral-bottom-left {
-      bottom: -50px;
-      left: -50px;
-      width: 400px;
-      height: 500px;
-      animation: gentleFloat 15s ease-in-out infinite reverse;
+      bottom: 0;
+      left: 0;
+      width: 120px;
+      height: 180px;
     }
 
-    .floral-top-left {
-      top: 50px;
-      left: 50px;
-      width: 300px;
-      height: 400px;
-      animation: gentleFloat 10s ease-in-out infinite 2s;
+    @media (min-width: 768px) {
+      .floral-top-right {
+        width: 250px;
+        height: 300px;
+      }
+      .floral-bottom-left {
+        width: 200px;
+        height: 250px;
+      }
     }
 
-    .floral-bottom-right {
-      bottom: 50px;
-      right: 50px;
-      width: 300px;
-      height: 400px;
-      animation: gentleFloat 14s ease-in-out infinite reverse 1s;
-    }
-
-    @keyframes gentleFloat {
-      0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
-      50% { transform: translateY(-15px) rotate(3deg); opacity: 0.9; }
-    }
-
+    /* ===== MAIN CONTENT ===== */
     .thank-you-title {
       font-family: 'Playfair Display', serif;
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       font-weight: 400;
       color: #f48fb1;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       z-index: 2;
       position: relative;
       line-height: 1.2;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
     }
 
     .thank-you-subtitle {
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: #b8860b;
       margin-bottom: 1rem;
       font-style: italic;
@@ -104,29 +94,29 @@
     }
 
     .thank-you-message {
-      font-size: 1.4rem;
+      font-size: 1.1rem;
       color: #8b4513;
-      max-width: 700px;
-      margin: 0 auto 3rem auto;
-      line-height: 1.8;
+      max-width: 90%;
+      margin: 0 auto 2rem auto;
+      line-height: 1.6;
       z-index: 2;
       position: relative;
     }
 
     .highlight-name {
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: #f48fb1;
       font-weight: 500;
-      margin: 2rem 0;
+      margin: 1.5rem 0;
       z-index: 2;
       position: relative;
     }
 
     .event-date {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       color: #b8860b;
-      margin-bottom: 2rem;
-      letter-spacing: 2px;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1px;
       z-index: 2;
       position: relative;
     }
@@ -134,44 +124,31 @@
     .view-memories-button {
       display: inline-flex;
       align-items: center;
-      gap: 1rem;
-      padding: 1.3rem 2.5rem;
+      gap: 0.8rem;
+      padding: 1rem 2rem;
       background: linear-gradient(135deg, #f8a5c2, #ec7097);
       color: white;
       text-decoration: none;
       border-radius: 50px;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       font-weight: 500;
       transition: all 0.3s ease;
-      box-shadow: 0 12px 36px rgba(248, 165, 194, 0.3);
-      animation: pulse 3s infinite;
+      box-shadow: 0 8px 24px rgba(248, 165, 194, 0.3);
       z-index: 2;
       position: relative;
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); box-shadow: 0 12px 36px rgba(248, 165, 194, 0.3); }
-      50% { transform: scale(1.05); box-shadow: 0 16px 40px rgba(248, 165, 194, 0.4); }
-      100% { transform: scale(1); box-shadow: 0 12px 36px rgba(248, 165, 194, 0.3); }
-    }
-
-    .view-memories-button:hover {
-      transform: translateY(-4px) scale(1.05);
-      box-shadow: 0 20px 48px rgba(248, 165, 194, 0.4);
-    }
-
     .heart-icon {
-      width: 24px;
-      height: 24px;
+      width: 20px;
+      height: 20px;
       fill: currentColor;
     }
 
     .venue-info {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #b8860b;
-      margin: 2rem 0;
+      margin: 1.5rem 0;
       line-height: 1.4;
-      opacity: 0.9;
       z-index: 2;
       position: relative;
     }
@@ -184,6 +161,7 @@
       font-style: italic;
     }
 
+    /* ===== VIDEO PAGE ===== */
     .video-page {
       display: none;
       min-height: 100vh;
@@ -193,7 +171,6 @@
       transform: translateY(50px);
       transition: all 0.8s ease;
       position: relative;
-      overflow: hidden;
     }
 
     .video-page.show {
@@ -203,7 +180,8 @@
     }
 
     .video-container {
-      max-width: 1200px;
+      width: 100%;
+      max-width: 800px;
       margin: 0 auto;
       text-align: center;
       position: relative;
@@ -211,59 +189,66 @@
     }
 
     .page-title {
-      font-size: 3.5rem;
+      font-size: 2.2rem;
       color: #f48fb1;
       margin-bottom: 1rem;
     }
 
     .page-subtitle {
       font-style: italic;
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: #b8860b;
       margin-bottom: 1.5rem;
     }
 
     .video-label {
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       color: #ec7097;
       margin-bottom: 1rem;
       background: linear-gradient(90deg, #f8a5c2, #f48fb1, #ec7097);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 600;
-      letter-spacing: 1px;
     }
 
     .video-wrapper {
       position: relative;
-      margin-bottom: 3rem;
-      border-radius: 20px;
+      margin-bottom: 2rem;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 24px 48px rgba(248, 165, 194, 0.25), 0 8px 20px rgba(184, 134, 11, 0.15);
+      box-shadow: 0 16px 32px rgba(248, 165, 194, 0.2);
       background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(10px);
-      padding: 2.5rem;
-      border: 2px solid rgba(248, 165, 194, 0.5);
+      padding: 1rem;
     }
 
     .video-embed {
       width: 100%;
-      height: 450px;
-      border-radius: 15px;
+      height: 0;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
       border: none;
+    }
+
+    .video-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
 
     .download-section {
       background: rgba(255, 255, 255, 0.7);
-      border-radius: 20px;
-      padding: 3rem;
-      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 2rem;
       border: 1px solid rgba(248, 165, 194, 0.2);
-      box-shadow: 0 16px 40px rgba(184, 134, 11, 0.1);
+      box-shadow: 0 12px 32px rgba(184, 134, 11, 0.1);
     }
 
     .download-title {
-      font-size: 2.5rem;
+      font-size: 1.8rem;
       font-weight: 500;
       color: #f48fb1;
       margin-bottom: 1rem;
@@ -271,8 +256,8 @@
 
     .download-description {
       color: #8b4513;
-      margin-bottom: 2.5rem;
-      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
       line-height: 1.6;
       font-style: italic;
     }
@@ -280,123 +265,60 @@
     .download-link {
       display: inline-flex;
       align-items: center;
-      gap: 1rem;
-      padding: 1.3rem 2.5rem;
+      gap: 0.8rem;
+      padding: 1rem 2rem;
       background: linear-gradient(135deg, #ec7097, #f8a5c2);
       color: white;
       text-decoration: none;
       border-radius: 50px;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       font-weight: 500;
       transition: all 0.3s ease;
-      box-shadow: 0 12px 36px rgba(184, 134, 11, 0.3);
     }
 
     .download-link:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 48px rgba(248, 165, 194, 0.4);
+      transform: translateY(-3px);
     }
 
     .back-button {
       position: fixed;
-      top: 2rem;
-      left: 2rem;
-      padding: 1rem 1.8rem;
+      top: 1.5rem;
+      left: 1.5rem;
+      padding: 0.8rem 1.5rem;
       background: rgba(255, 255, 255, 0.7);
       border: 1px solid rgba(184, 134, 11, 0.3);
       border-radius: 50px;
       color: #b8860b;
       text-decoration: none;
-      backdrop-filter: blur(10px);
       transition: all 0.3s ease;
       z-index: 1000;
     }
 
-    .back-button:hover {
-      background: rgba(255, 255, 255, 0.9);
-      transform: translateX(-5px);
-    }
-
-    /* Floating petals */
-    .petal {
-      position: absolute;
-      background-size: contain;
-      background-repeat: no-repeat;
-      z-index: 1;
-      opacity: 0.7;
-    }
-
     .download-icon {
-      width: 24px;
-      height: 24px;
+      width: 20px;
+      height: 20px;
       fill: currentColor;
     }
   </style>
 </head>
 <body>
   <div class="thank-you-page" id="thankYouPage">
-    <!-- Floral decorations -->
+    <!-- Floral decorations optimized for mobile -->
     <div class="floral-decoration floral-top-right">
-      <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
-        <!-- Main rose -->
-        <path d="M250,100 C270,80 290,90 300,110 C310,130 290,150 270,160 C250,170 230,160 220,140 C210,120 230,100 250,100 Z" fill="#f8a5c2" opacity="0.8"/>
-        <!-- Rose leaves -->
-        <path d="M270,160 C290,170 300,190 290,210 C280,230 260,230 250,220 L240,200 C250,190 260,180 270,160 Z" fill="#a5d6a7" opacity="0.7"/>
-        <path d="M230,160 C210,170 200,190 210,210 C220,230 240,230 250,220 L260,200 C250,190 240,180 230,160 Z" fill="#a5d6a7" opacity="0.7"/>
-        <!-- Smaller flowers -->
-        <circle cx="350" cy="200" r="25" fill="#f48fb1" opacity="0.7"/>
-        <circle cx="330" cy="250" r="20" fill="#f8a5c2" opacity="0.7"/>
-        <circle cx="300" cy="300" r="15" fill="#fce4ec" opacity="0.8"/>
-        <!-- Leaves and vines -->
-        <path d="M350,250 C340,270 320,280 300,270 C280,260 270,240 280,220" stroke="#a5d6a7" stroke-width="3" fill="none"/>
-        <path d="M280,220 C290,200 310,190 330,200" stroke="#a5d6a7" stroke-width="3" fill="none"/>
+      <svg viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg">
+        <!-- Simplified rose design -->
+        <path d="M150,50 C160,40 170,45 175,55 C180,65 170,75 160,80 C150,85 140,80 135,70 C130,60 140,50 150,50 Z" fill="#f8a5c2" opacity="0.9"/>
+        <path d="M160,80 C170,85 175,95 170,105 C165,115 155,115 150,110 L145,100 C150,95 155,90 160,80 Z" fill="#a5d6a7" opacity="0.7"/>
+        <circle cx="180" cy="100" r="12" fill="#f48fb1" opacity="0.8"/>
       </svg>
     </div>
     
     <div class="floral-decoration floral-bottom-left">
-      <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
-        <!-- Peony-style flower -->
-        <path d="M150,350 C130,330 110,340 100,360 C90,380 110,400 130,410 C150,420 170,410 180,390 C190,370 170,350 150,350 Z" fill="#f8a5c2" opacity="0.8"/>
-        <path d="M150,350 C170,330 190,340 200,360 C210,380 190,400 170,410 C150,420 130,410 120,390 C110,370 130,350 150,350 Z" fill="#f48fb1" opacity="0.8"/>
-        <!-- Flower center -->
-        <circle cx="150" cy="380" r="15" fill="#ffeb3b" opacity="0.9"/>
-        <!-- Leaves -->
-        <path d="M100,400 C80,420 70,450 90,470 C110,490 140,480 160,460 L150,440 C130,460 110,460 100,440 C90,420 100,410 100,400 Z" fill="#81c784" opacity="0.7"/>
-        <path d="M200,400 C220,420 230,450 210,470 C190,490 160,480 140,460 L150,440 C170,460 190,460 200,440 C210,420 200,410 200,400 Z" fill="#81c784" opacity="0.7"/>
-        <!-- Small buds -->
-        <circle cx="50" cy="300" r="12" fill="#fce4ec" opacity="0.9"/>
-        <circle cx="80" cy="250" r="10" fill="#f8a5c2" opacity="0.9"/>
-      </svg>
-    </div>
-
-    <div class="floral-decoration floral-top-left">
-      <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
-        <!-- Cherry blossom branch -->
-        <path d="M50,50 C70,70 90,90 110,100 C130,110 150,100 170,90 C190,80 210,70 230,80 C250,90 250,110 240,130" stroke="#8d6e63" stroke-width="4" fill="none"/>
-        <!-- Blossoms -->
-        <circle cx="100" cy="90" r="12" fill="#fce4ec" opacity="0.9"/>
-        <circle cx="150" cy="80" r="10" fill="#f8a5c2" opacity="0.9"/>
-        <circle cx="200" cy="100" r="8" fill="#fce4ec" opacity="0.9"/>
-        <circle cx="230" cy="120" r="10" fill="#f8a5c2" opacity="0.9"/>
-        <!-- Petals -->
-        <path d="M100,80 C105,75 110,80 105,85 C100,90 95,85 100,80 Z" fill="#ffffff" opacity="0.9"/>
-        <path d="M150,70 C155,65 160,70 155,75 C150,80 145,75 150,70 Z" fill="#ffffff" opacity="0.9"/>
-      </svg>
-    </div>
-
-    <div class="floral-decoration floral-bottom-right">
-      <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
-        <!-- Hydrangea-style flower cluster -->
-        <circle cx="200" cy="300" r="15" fill="#f8a5c2" opacity="0.8"/>
-        <circle cx="220" cy="280" r="12" fill="#f48fb1" opacity="0.8"/>
-        <circle cx="240" cy="300" r="10" fill="#f8a5c2" opacity="0.8"/>
-        <circle cx="230" cy="320" r="12" fill="#fce4ec" opacity="0.8"/>
-        <circle cx="210" cy="330" r="10" fill="#f48fb1" opacity="0.8"/>
-        <circle cx="190" cy="320" r="8" fill="#f8a5c2" opacity="0.8"/>
-        <!-- Stem -->
-        <path d="M210,350 C210,370 200,390 190,400" stroke="#a5d6a7" stroke-width="3" fill="none"/>
-        <!-- Leaves -->
-        <path d="M190,380 C170,370 160,350 170,330 C180,310 200,310 210,330 C220,350 210,370 190,380 Z" fill="#81c784" opacity="0.7"/>
+      <svg viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg">
+        <!-- Simplified peony design -->
+        <path d="M50,150 C40,140 30,145 25,155 C20,165 30,175 40,180 C50,185 60,180 65,170 C70,160 60,150 50,150 Z" fill="#f48fb1" opacity="0.9"/>
+        <circle cx="50" cy="165" r="8" fill="#ffeb3b" opacity="0.9"/>
+        <path d="M30,170 C20,180 25,195 35,200 C45,205 55,200 60,190 L55,180 C50,185 45,185 40,180 C35,175 35,170 30,170 Z" fill="#81c784" opacity="0.7"/>
       </svg>
     </div>
 
@@ -426,7 +348,13 @@
       <div class="page-subtitle">July 13, 2025</div>
       <div class="video-label">Pre-Debut Video</div>
       <div class="video-wrapper">
-        <iframe class="video-embed" src="https://www.youtube.com/embed/1xMDiXOQtos?rel=0&modestbranding=1" allowfullscreen></iframe>
+        <div class="video-embed">
+          <iframe 
+            src="https://www.youtube.com/embed/1xMDiXOQtos?rel=0&modestbranding=1" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
       </div>
       <div class="download-section">
         <h2 class="download-title">Photo Collection</h2>
@@ -476,59 +404,20 @@
       handleBack();
     });
 
-    // Create floating petals
-    function createPetals() {
-      const thankYouPage = document.getElementById('thankYouPage');
-      const videoPage = document.getElementById('videoPage');
+    // Make video responsive
+    function adjustVideoSize() {
+      const videoWrapper = document.querySelector('.video-wrapper');
+      const windowWidth = window.innerWidth;
       
-      for (let i = 0; i < 15; i++) {
-        createPetalsOnPage(thankYouPage);
-        createPetalsOnPage(videoPage);
+      if (windowWidth < 768) {
+        videoWrapper.style.padding = '0.5rem';
+      } else {
+        videoWrapper.style.padding = '1rem';
       }
     }
 
-    function createPetalsOnPage(page) {
-      const petal = document.createElement('div');
-      petal.className = 'petal';
-      
-      // Random petal styles
-      const size = Math.random() * 20 + 10;
-      const posX = Math.random() * 100;
-      const delay = Math.random() * 10;
-      const duration = Math.random() * 15 + 10;
-      const pinkShade = `hsl(${Math.random() * 10 + 330}, ${Math.random() * 30 + 70}%, ${Math.random() * 20 + 80}%)`;
-      
-      petal.style.width = `${size}px`;
-      petal.style.height = `${size}px`;
-      petal.style.left = `${posX}%`;
-      petal.style.top = '-30px';
-      petal.style.animation = `floatDown ${duration}s linear ${delay}s infinite`;
-      petal.style.backgroundImage = `radial-gradient(circle, ${pinkShade}, ${pinkShade}00)`;
-      
-      // Add SVG petal shape
-      petal.innerHTML = `
-        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10,0 C12,5 15,8 20,10 C15,12 12,15 10,20 C8,15 5,12 0,10 C5,8 8,5 10,0 Z" fill="${pinkShade}" opacity="0.7"/>
-        </svg>
-      `;
-      
-      page.appendChild(petal);
-    }
-
-    // Add CSS for floating petals animation
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes floatDown {
-        0% { transform: translateY(0) rotate(0deg); opacity: 0; }
-        10% { opacity: 0.7; }
-        90% { opacity: 0.7; }
-        100% { transform: translateY(calc(100vh + 30px)) rotate(360deg); opacity: 0; }
-      }
-    `;
-    document.head.appendChild(style);
-
-    // Create petals when page loads
-    window.addEventListener('load', createPetals);
+    window.addEventListener('resize', adjustVideoSize);
+    window.addEventListener('load', adjustVideoSize);
   </script>
 </body>
 </html>
