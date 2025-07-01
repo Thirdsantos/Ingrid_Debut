@@ -4,12 +4,180 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thank You | Ingrid Anne's Debut - July 13, 2025</title>
-  <!-- Shared Styles & Fonts can be linked externally or embedded -->
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      background: #faf8f6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .thank-you-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      position: relative;
+      background: linear-gradient(135deg, #fff0f5, #f9f6f3, #fdf6fa, #faf8f6);
+      overflow: hidden;
+      padding: 2rem;
+    }
+
+    .floral-decoration {
+      position: absolute;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.8;
+    }
+
+    .floral-top-right {
+      top: 0;
+      right: 0;
+      width: 150px;
+      height: 200px;
+    }
+
+    .floral-bottom-left {
+      bottom: 0;
+      left: 0;
+      width: 120px;
+      height: 180px;
+    }
+
+    @media (min-width: 768px) {
+      .floral-top-right {
+        width: 250px;
+        height: 300px;
+      }
+      .floral-bottom-left {
+        width: 200px;
+        height: 250px;
+      }
+    }
+
+    .thank-you-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: #f48fb1;
+      margin-bottom: 1rem;
+      z-index: 2;
+      position: relative;
+      line-height: 1.2;
+    }
+
+    .thank-you-subtitle {
+      font-size: 1.5rem;
+      color: #b8860b;
+      margin-bottom: 1rem;
+      font-style: italic;
+      z-index: 2;
+      position: relative;
+    }
+
+    .thank-you-message {
+      font-size: 1.1rem;
+      color: #8b4513;
+      max-width: 90%;
+      margin: 0 auto 2rem auto;
+      line-height: 1.6;
+      z-index: 2;
+      position: relative;
+    }
+
+    .highlight-name {
+      font-size: 2rem;
+      color: #f48fb1;
+      font-weight: 500;
+      margin: 1.5rem 0;
+      z-index: 2;
+      position: relative;
+    }
+
+    .event-date {
+      font-size: 1.2rem;
+      color: #b8860b;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1px;
+      z-index: 2;
+      position: relative;
+    }
+
+    .view-memories-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, #f8a5c2, #ec7097);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 24px rgba(248, 165, 194, 0.3);
+      z-index: 2;
+      position: relative;
+    }
+
+    .view-memories-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(248, 165, 194, 0.4);
+    }
+
+    .heart-icon {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    .venue-info {
+      font-size: 1rem;
+      color: #b8860b;
+      margin: 1.5rem 0;
+      line-height: 1.4;
+      z-index: 2;
+      position: relative;
+    }
+
+    .venue-name {
+      font-weight: 500;
+    }
+
+    .venue-location {
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
   <div class="thank-you-page">
-    <!-- Floral decorations & petal scripts (optional) -->
+    <!-- Floral decorations -->
+    <div class="floral-decoration floral-top-right">
+      <svg viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg">
+        <path d="M150,50 C160,40 170,45 175,55 C180,65 170,75 160,80 C150,85 140,80 135,70 C130,60 140,50 150,50 Z" fill="#f8a5c2" opacity="0.9"/>
+        <path d="M160,80 C170,85 175,95 170,105 C165,115 155,115 150,110 L145,100 C150,95 155,90 160,80 Z" fill="#a5d6a7" opacity="0.7"/>
+        <circle cx="180" cy="100" r="12" fill="#f48fb1" opacity="0.8"/>
+      </svg>
+    </div>
+    
+    <div class="floral-decoration floral-bottom-left">
+      <svg viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,150 C40,140 30,145 25,155 C20,165 30,175 40,180 C50,185 60,180 65,170 C70,160 60,150 50,150 Z" fill="#f48fb1" opacity="0.9"/>
+        <circle cx="50" cy="165" r="8" fill="#ffeb3b" opacity="0.9"/>
+        <path d="M30,170 C20,180 25,195 35,200 C45,205 55,200 60,190 L55,180 C50,185 45,185 40,180 C35,175 35,170 30,170 Z" fill="#81c784" opacity="0.7"/>
+      </svg>
+    </div>
+
     <h1 class="thank-you-title">Thank You</h1>
     <div class="thank-you-subtitle">For Being Part of My Special Day</div>
     <p class="thank-you-message">
@@ -25,6 +193,7 @@
     </div>
     <a href="memories.html" class="view-memories-button">
       View Event Memories
+      <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"/></svg>
     </a>
   </div>
 </body>
