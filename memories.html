@@ -3,28 +3,175 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Debut Memories | Ingrid Anne</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Debut Memories | Ingrid Anne's Debut - July 13, 2025</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      background: linear-gradient(135deg, #fff0f5, #fdf6fa, #faf8f6);
+      min-height: 100vh;
+      overflow-x: hidden;
+      padding: 2rem;
+    }
+
+    .video-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 1.5rem;
+      left: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(184, 134, 11, 0.3);
+      border-radius: 50px;
+      color: #b8860b;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .back-button:hover {
+      background: rgba(255, 255, 255, 0.9);
+      transform: translateX(-5px);
+    }
+
+    .page-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #f48fb1;
+      margin-bottom: 1rem;
+    }
+
+    .page-subtitle {
+      font-style: italic;
+      font-size: 1.5rem;
+      color: #b8860b;
+      margin-bottom: 1.5rem;
+    }
+
+    .video-label {
+      font-size: 1.4rem;
+      color: #ec7097;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, #f8a5c2, #f48fb1, #ec7097);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+    }
+
+    .video-wrapper {
+      position: relative;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 16px 32px rgba(248, 165, 194, 0.2);
+      background: rgba(255, 255, 255, 0.7);
+      padding: 1rem;
+    }
+
+    .video-embed {
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      border: none;
+    }
+
+    .video-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .download-section {
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 12px;
+      padding: 2rem;
+      border: 1px solid rgba(248, 165, 194, 0.2);
+      box-shadow: 0 12px 32px rgba(184, 134, 11, 0.1);
+    }
+
+    .download-title {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #f48fb1;
+      margin-bottom: 1rem;
+    }
+
+    .download-description {
+      color: #8b4513;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .download-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, #ec7097, #f8a5c2);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .download-link:hover {
+      transform: translateY(-3px);
+    }
+
+    .download-icon {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+  </style>
 </head>
 <body>
-  <div class="video-page">
-    <a href="index.html" class="back-button">← Back</a>
-    <div class="video-container">
-      <h1 class="page-title">Debut Memories</h1>
-      <div class="page-subtitle">July 13, 2025</div>
-      <div class="video-label">Pre-Debut Video</div>
-      <div class="video-wrapper">
-        <iframe class="video-embed" src="https://www.youtube.com/embed/1xMDiXOQtos?rel=0&modestbranding=1" allowfullscreen></iframe>
+  <a href="index.html" class="back-button">← Back</a>
+  <div class="video-container">
+    <h1 class="page-title">Debut Memories</h1>
+    <div class="page-subtitle">July 13, 2025</div>
+    <div class="video-label">Pre-Debut Video</div>
+    <div class="video-wrapper">
+      <div class="video-embed">
+        <iframe 
+          src="https://www.youtube.com/embed/1xMDiXOQtos?rel=0&modestbranding=1" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
       </div>
-      <div class="download-section">
-        <h2 class="download-title">Photo Collection</h2>
-        <p class="download-description">
-          Download the complete collection of debut photos to keep these precious memories.
-        </p>
-        <a href="https://drive.google.com/drive/folders/1JuBsu42n1ublsPn9LXCLmdz74q881gaM?usp=sharing" class="download-link" target="_blank">
-          Download Photos
-        </a>
-      </div>
+    </div>
+    <div class="download-section">
+      <h2 class="download-title">Photo Collection</h2>
+      <p class="download-description">
+        Download the complete collection of debut photos to keep these precious memories.
+      </p>
+      <a href="https://drive.google.com/drive/folders/1JuBsu42n1ublsPn9LXCLmdz74q881gaM?usp=sharing" class="download-link" target="_blank">
+        <svg class="download-icon" viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+        Download Photos
+      </a>
     </div>
   </div>
 </body>
