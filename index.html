@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>Thank You | Ingrid Anne's Debut - July 13, 2025</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
@@ -13,26 +13,25 @@
       box-sizing: border-box;
     }
 
-body {
-  font-family: 'Cormorant Garamond', serif;
-  min-height: 100vh;
-  overflow-x: hidden;
-  background: 
-    url(https://images.unsplash.com/photo-1527061011665-3652c757a4d4);
-  background-size: 300px;
-  position: relative;
-}
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background: 
+        url('https://images.unsplash.com/photo-1527061011665-3652c757a4d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat fixed;
+      position: relative;
+    }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.7);
-  z-index: 0;
-}
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4); /* Lighter overlay for better visibility */
+      z-index: 0;
+    }
 
     .thank-you-page {
       display: flex;
@@ -42,141 +41,109 @@ body::before {
       min-height: 100vh;
       text-align: center;
       position: relative;
-      padding: 2rem;
+      padding: 1.5rem;
       z-index: 1;
     }
 
     .content-overlay {
-      background: rgba(255, 255, 255, 0.85); /* More transparent white box */
-      backdrop-filter: blur(8px);
-      border-radius: 30px;
-      padding: 3rem 2.5rem;
-      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      max-width: 600px;
+      background: rgba(255, 255, 255, 0.75); /* More transparent */
+      backdrop-filter: blur(5px);
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      max-width: 90%;
       width: 100%;
       transition: all 0.3s ease;
+      margin: 0 auto;
     }
 
-    .content-overlay:hover {
-      background: rgba(255, 255, 255, 0.92); /* Slightly more opaque on hover */
+    @media (min-width: 768px) {
+      .content-overlay {
+        max-width: 600px;
+        padding: 3rem 2.5rem;
+        border-radius: 30px;
+      }
     }
 
     .thank-you-title {
       font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
+      font-size: 2.2rem;
       font-weight: 500;
       color: #d81b60;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
       line-height: 1.2;
-      text-shadow: 2px 2px 4px rgba(216, 27, 96, 0.1);
     }
 
     .thank-you-subtitle {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       color: #8d6e63;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
       font-style: italic;
-      font-weight: 400;
     }
 
     .thank-you-message {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #5d4037;
-      margin: 0 auto 2rem auto;
-      line-height: 1.7;
-      font-weight: 400;
+      margin: 0 auto 1.5rem auto;
+      line-height: 1.6;
     }
 
     .highlight-name {
       font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       color: #d81b60;
       font-weight: 600;
-      margin: 1.5rem 0;
-      text-shadow: 1px 1px 3px rgba(216, 27, 96, 0.1);
+      margin: 1.2rem 0;
     }
 
     .event-date {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       color: #8d6e63;
-      margin-bottom: 1.5rem;
-      letter-spacing: 1px;
-      font-weight: 500;
+      margin-bottom: 1.2rem;
     }
 
     .view-memories-button {
       display: inline-flex;
       align-items: center;
-      gap: 0.8rem;
-      padding: 1.2rem 2.5rem;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 1rem 2rem;
       background: linear-gradient(135deg, #f06292, #e91e63, #d81b60);
       color: white;
       text-decoration: none;
       border-radius: 50px;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 500;
       transition: all 0.3s ease;
-      box-shadow: 0 10px 30px rgba(216, 27, 96, 0.3);
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      position: relative;
-      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(216, 27, 96, 0.3);
+      border: none;
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto;
     }
 
     .view-memories-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 35px rgba(216, 27, 96, 0.4);
-      background: linear-gradient(135deg, #ec407a, #e91e63, #c2185b);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(216, 27, 96, 0.4);
     }
 
     .view-memories-button:active {
       transform: translateY(1px);
-    }
-
-    .view-memories-button::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 5px;
-      height: 5px;
-      background: rgba(255, 255, 255, 0.5);
-      opacity: 0;
-      border-radius: 100%;
-      transform: scale(1, 1) translate(-50%, -50%);
-      transform-origin: 50% 50%;
-    }
-
-    .view-memories-button:focus:not(:active)::after {
-      animation: ripple 0.6s ease-out;
-    }
-
-    @keyframes ripple {
-      0% {
-        transform: scale(0, 0);
-        opacity: 0.5;
-      }
-      100% {
-        transform: scale(20, 20);
-        opacity: 0;
-      }
+      box-shadow: 0 5px 15px rgba(216, 27, 96, 0.3);
     }
 
     .heart-icon {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       fill: currentColor;
       transition: transform 0.3s ease;
     }
 
-    .view-memories-button:hover .heart-icon {
-      transform: scale(1.2);
-    }
-
     .venue-info {
-      font-size: 1rem;
+      font-size: 0.9rem;
       color: #8d6e63;
-      margin: 1.5rem 0;
+      margin: 1.2rem 0;
       line-height: 1.5;
     }
 
@@ -187,14 +154,30 @@ body::before {
 
     .venue-location {
       font-style: italic;
-      margin-top: 0.3rem;
     }
 
     /* Page transition */
     html.is-changing .thank-you-page {
       opacity: 0;
-      transform: translateY(-20px);
+      transform: translateY(-10px);
       transition: all 0.3s ease;
+    }
+
+    /* Mobile-specific optimizations */
+    @media (max-width: 480px) {
+      .thank-you-title {
+        font-size: 1.8rem;
+      }
+      .highlight-name {
+        font-size: 1.5rem;
+      }
+      .thank-you-subtitle,
+      .event-date {
+        font-size: 1.1rem;
+      }
+      .content-overlay {
+        padding: 1.5rem 1.2rem;
+      }
     }
   </style>
 </head>
@@ -225,13 +208,22 @@ body::before {
     document.getElementById('memories-button').addEventListener('click', function(e) {
       e.preventDefault();
       
-      // Add transition class to html element
+      // Add transition class
       document.documentElement.classList.add('is-changing');
       
-      // After a short delay, navigate to the new page
+      // Navigate after delay
       setTimeout(function() {
         window.location.href = 'memories.html';
       }, 300);
+    });
+
+    // Better touch feedback for mobile
+    document.getElementById('memories-button').addEventListener('touchstart', function() {
+      this.classList.add('active');
+    });
+    
+    document.getElementById('memories-button').addEventListener('touchend', function() {
+      this.classList.remove('active');
     });
   </script>
 </body>
