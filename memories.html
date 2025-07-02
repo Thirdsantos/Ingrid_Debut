@@ -210,6 +210,17 @@
       fill: currentColor;
     }
 
+    /* Page transition effect */
+    html.is-changing .video-container,
+    html.is-changing .back-button,
+    html.is-changing .page-title,
+    html.is-changing .page-subtitle,
+    html.is-changing .content-box {
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: all 0.3s ease;
+    }
+
     /* Mobile optimizations */
     @media (max-width: 768px) {
       body {
@@ -247,6 +258,23 @@
       
       .download-description {
         font-size: 1rem;
+      }
+      
+      /* Adjust animation distances for mobile */
+      .video-container,
+      .back-button,
+      .page-title,
+      .page-subtitle,
+      .content-box {
+        transform: translateY(10px);
+      }
+      
+      html.is-changing .video-container,
+      html.is-changing .back-button,
+      html.is-changing .page-title,
+      html.is-changing .page-subtitle,
+      html.is-changing .content-box {
+        transform: translateY(-10px);
       }
     }
   </style>
@@ -294,7 +322,7 @@
     // Smooth back button transition
     document.querySelector('.back-button').addEventListener('click', function(e) {
       e.preventDefault();
-      document.body.classList.remove('loaded');
+      document.documentElement.classList.add('is-changing');
       setTimeout(function() {
         window.location.href = 'index.html';
       }, 300);
