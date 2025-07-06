@@ -2,34 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You | Ingrid Anne's Debut - July 13, 2025</title>
 
-  <!-- Favicon and Apple Icon -->
+  <!-- ✅ Favicon -->
   <link rel="icon" type="image/png" href="/favicon.png" />
-  <!-- Social Media Thumbnail -->
-  <meta property="og:image" content="https://ingrid-debut.vercel.app/thumbnail.PNG" />
-  <meta property="og:title" content="Thank You | Ingrid Anne's Debut" />
-  <meta property="og:description" content="Thank you for being part of my special day - Ingrid Anne, July 13, 2025" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="index.html" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png" />
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Cormorant Garamond', serif;
       min-height: 100vh;
       overflow-x: hidden;
-      background: url('https://images.unsplash.com/photo-1527061011665-3652c757a4d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat fixed;
+      background:
+        url('https://images.unsplash.com/photo-1527061011665-3652c757a4d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat fixed;
       position: relative;
     }
 
     body::before {
       content: '';
       position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: rgba(255, 255, 255, 0.4);
       z-index: 0;
     }
@@ -41,6 +45,7 @@
       align-items: center;
       min-height: 100vh;
       text-align: center;
+      position: relative;
       padding: 1.5rem;
       z-index: 1;
       opacity: 0;
@@ -59,8 +64,10 @@
       border-radius: 20px;
       padding: 2rem 1.5rem;
       box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
       max-width: 90%;
       width: 100%;
+      transition: all 0.3s ease;
       margin: 0 auto;
     }
 
@@ -218,28 +225,33 @@
       font-style: italic;
     }
 
-    html.is-changing .thank-you-page {
-      opacity: 0;
-      transform: translateY(-20px);
-      transition: all 0.3s ease;
-    }
-
+    /* Mobile-specific optimizations */
     @media (max-width: 480px) {
-      .thank-you-title { font-size: 1.8rem; }
-      .highlight-name { font-size: 1.5rem; }
-      .thank-you-subtitle, .event-date { font-size: 1.1rem; }
-      .content-overlay { padding: 1.5rem 1.2rem; }
+      .thank-you-title {
+        font-size: 1.8rem;
+      }
+      .highlight-name {
+        font-size: 1.5rem;
+      }
+      .thank-you-subtitle,
+      .event-date {
+        font-size: 1.1rem;
+      }
+      .content-overlay {
+        padding: 1.5rem 1.2rem;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="thank-you-page">
     <div class="content-overlay">
       <h1 class="thank-you-title">Thank You</h1>
       <div class="thank-you-subtitle">For Being Part of My Special Day</div>
       <p class="thank-you-message">
-        Your presence made my debut celebration even more memorable. 
-        I'm truly grateful for the love, support, and wonderful memories 
+        Your presence made my debut celebration even more memorable.
+        I'm truly grateful for the love, support, and wonderful memories
         we created together on this milestone occasion.
       </p>
       <div class="highlight-name">Ingrid Anne</div>
@@ -250,26 +262,37 @@
       </div>
       <a href="memories.html" class="view-memories-button" id="memories-button">
         View Event Memories
-        <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"/></svg>
+        <svg class="heart-icon" viewBox="0 0 24 24">
+          <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3
+              C9.24,3 10.91,3.81 12,5.08
+              C13.09,3.81 14.76,3 16.5,3
+              C19.58,3 22,5.41 22,8.5
+              C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
+        </svg>
       </a>
     </div>
   </div>
 
   <script>
-    window.addEventListener('load', function() {
-      setTimeout(() => document.body.classList.add('loaded'), 50);
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        document.body.classList.add('loaded');
+      }, 50);
     });
 
-    document.getElementById('memories-button').addEventListener('click', function(e) {
+    document.getElementById('memories-button').addEventListener('click', function (e) {
       e.preventDefault();
       document.documentElement.classList.add('is-changing');
-      setTimeout(() => window.location.href = 'memories.html', 300);
+      setTimeout(function () {
+        window.location.href = 'memories.html';
+      }, 300);
     });
 
-    document.getElementById('memories-button').addEventListener('touchstart', function() {
+    document.getElementById('memories-button').addEventListener('touchstart', function () {
       this.classList.add('active');
     });
-    document.getElementById('memories-button').addEventListener('touchend', function() {
+
+    document.getElementById('memories-button').addEventListener('touchend', function () {
       this.classList.remove('active');
     });
   </script>
