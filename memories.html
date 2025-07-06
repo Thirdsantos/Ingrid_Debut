@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-  <title>Debut Memories | Ingrid Anne's Debut - July 13, 2025</title>
+  <title>Debut Highlights | Ingrid Anne's Debut - July 13, 2025</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
 
@@ -129,6 +129,10 @@
 
     .content-box:nth-child(2) {
       transition-delay: 0.3s;
+    }
+    
+    .content-box:nth-child(3) {
+      transition-delay: 0.4s;
     }
 
     .video-label {
@@ -266,7 +270,7 @@
   <a href="index.html" class="back-button">← Back</a>
   
   <div class="video-container">
-    <h1 class="page-title">Debut Memories</h1>
+    <h1 class="page-title">Debut Highlights</h1>
     <div class="page-subtitle">July 13, 2025</div>
     
     <div class="content-box">
@@ -292,6 +296,17 @@
         Download Photos
       </a>
     </div>
+    
+    <div class="content-box">
+      <h2 class="download-title">Photobooth Pictures</h2>
+      <p class="download-description">
+        Get all the fun and candid moments from our photobooth! Download the complete set of photobooth pictures.
+      </p>
+      <a href="https://drive.google.com/drive/folders/18ArwCOTvP2bCOWO7XrNCL7O8PM70j6LT?usp=drive_link" class="download-link" target="_blank">
+        <svg class="download-icon" viewBox="0 0 24 24"><path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/></svg>
+        Download Photobooth
+      </a>
+    </div>
   </div>
 
   <script>
@@ -311,13 +326,15 @@
       }, 300); // Perfect 300ms transition
     });
 
-    // Touch feedback for download button
-    const downloadBtn = document.querySelector('.download-link');
-    downloadBtn.addEventListener('touchstart', function() {
-      this.classList.add('active');
-    });
-    downloadBtn.addEventListener('touchend', function() {
-      this.classList.remove('active');
+    // Touch feedback for download buttons
+    const downloadBtns = document.querySelectorAll('.download-link');
+    downloadBtns.forEach(btn => {
+      btn.addEventListener('touchstart', function() {
+        this.classList.add('active');
+      });
+      btn.addEventListener('touchend', function() {
+        this.classList.remove('active');
+      });
     });
   </script>
 </body>
